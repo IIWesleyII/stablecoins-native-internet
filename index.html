@@ -1,127 +1,634 @@
-<main>
-    <header>
-        <h1>
-            Stablecoins: Making Money Native to the Internet
-        </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An essay by Wesley Shaw exploring how
+    stablecoins can make payments native to internet software, APIs, and
+    protocols, with projects demonstrating practical use cases.">
+    <meta name="author" content="Wesley Shaw">
+    <meta name="theme-color" content="#24583c">
+    <meta property="og:title" content="Stablecoins: Making Money Native to the Internet">
+    <meta property="og:description" content="How stablecoins could make money
+    behave more like information across open networks.">
+    <meta property="og:type" content="article">
+    <title>Stablecoins: Making Money Native to the Internet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+    <a class="skip-link" href="#introduction">Skip to article</a>
+    <div class="progress" aria-hidden="true"></div>
 
-        <p class="subtitle">
-            Short summary of the thesis.
+    <main>
+        <header class="hero">
+            <h1>Stablecoins:
+                <span>Making Money Native<br class="title-break">
+                to the Internet</span>
+            </h1>
+            <p class="dek">
+                How stablecoins could make money behave more like
+                information and payments become part of the software
+                that powers the web.
+            </p>
+            <div class="byline">
+                <strong>Wesley Shaw</strong>
+                <span class="dot" aria-hidden="true"></span>
+                <span>2026</span>
+            </div>
+        </header>
+        <div class="page-grid">
+            <aside class="sidebar">
+                <nav class="contents" aria-label="Table of contents">
+                    <ol>
+                <li>
+                    <a href="#introduction">
+                        <span class="toc-number">01</span>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#money-today">
+                        <span class="toc-number">02</span>
+                        <span>Why money does not move like information today</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#stablecoins">
+                        <span class="toc-number">03</span>
+                        <span>What are stablecoins and why are they different</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#internet-properties">
+                        <span class="toc-number">04</span>
+                        <span>How stablecoins make money behave more like information</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#micropayments">
+                        <span class="toc-number">05</span>
+                        <span>Micropayments and Nanopayments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#protocol-payments">
+                        <span class="toc-number">06</span>
+                        <span>Payments becoming part of internet protocols</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#machine-payments">
+                        <span class="toc-number">07</span>
+                        <span>Machine and API payments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#infrastructure">
+                        <span class="toc-number">08</span>
+                        <span>Building real payment infrastructure</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#programmable-money">
+                        <span class="toc-number">09</span>
+                        <span>Programmable money and smart contracts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#limitations">
+                        <span class="toc-number">10</span>
+                        <span>Limitations and what still needs solving</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#conclusion">
+                        <span class="toc-number">11</span>
+                        <span>The successful stablecoin future may be invisible</span>
+                    </a>
+                </li>
+                    </ol>
+                </nav>
+                <a class="sidebar-bottom" href="#top">↑ Back to top</a>
+            </aside>
+            <article aria-label="Stablecoins: Making Money Native to the Internet">
+                <details class="mobile-contents">
+                    <summary>In this essay · 11 sections</summary>
+                    <nav class="contents" aria-label="Mobile table of contents">
+                        <ol>
+                <li>
+                    <a href="#introduction">
+                        <span class="toc-number">01</span>
+                        <span>Introduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#money-today">
+                        <span class="toc-number">02</span>
+                        <span>Why money does not move like information today</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#stablecoins">
+                        <span class="toc-number">03</span>
+                        <span>What are stablecoins and why are they different</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#internet-properties">
+                        <span class="toc-number">04</span>
+                        <span>How stablecoins make money behave more like information</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#micropayments">
+                        <span class="toc-number">05</span>
+                        <span>Micropayments and Nanopayments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#protocol-payments">
+                        <span class="toc-number">06</span>
+                        <span>Payments becoming part of internet protocols</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#machine-payments">
+                        <span class="toc-number">07</span>
+                        <span>Machine and API payments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#infrastructure">
+                        <span class="toc-number">08</span>
+                        <span>Building real payment infrastructure</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#programmable-money">
+                        <span class="toc-number">09</span>
+                        <span>Programmable money and smart contracts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#limitations">
+                        <span class="toc-number">10</span>
+                        <span>Limitations and what still needs solving</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#conclusion">
+                        <span class="toc-number">11</span>
+                        <span>The successful stablecoin future may be invisible</span>
+                    </a>
+                </li>
+                        </ol>
+                    </nav>
+                </details>
+                <section class="summary-card" id="at-a-glance"
+                         aria-labelledby="summary-heading">
+                    <h2 id="summary-heading">TLDR</h2>
+                    <ul>
+                <li>Stablecoins could make money behave more like information, allowing software to exchange value as naturally as it exchanges data. This becomes more important as transaction volume increases, payments become more automated, and AI agents consume services without interacting with ads.</li>
+                <li>I made projects that demonstrate potential use cases here:  <a href="https://github.com/IIWesleyII">GitHub</a></li>
+                <li>Stablecoins still have major problems to solve, including wallet UX, private key management, gas fees, privacy, and regulation.</li>
+                    </ul>
+                </section>
+                <!-- Edit each section's paragraphs below to update the essay. -->
+    <section class="essay-section" id="introduction"
+             aria-labelledby="heading-introduction">
+        <div class="section-label">Section 01</div>
+        <h2 id="heading-introduction">Introduction</h2>
+        <p>
+            The internet has become extraordinarily effective at moving
+            information, but moving money online still relies on infrastructure
+            that was largely designed around people, banks, and account-based
+            systems rather than software itself. As more economic activity
+            shifts into APIs, automated services, and AI agents, the internet
+            will increasingly need payment systems that software can interact
+            with directly. Stablecoins could become a core financial layer of
+            the internet by making money behave more like information, moving
+            across open networks and integrating directly with the software,
+            APIs, and protocols that already power the web. By making value
+            easier for applications to send, receive, verify, and program,
+            stablecoins could make payments a native component of the internet
+            rather than a separate system layered on top of it.
         </p>
+    </section>
+    <section class="essay-section" id="money-today"
+             aria-labelledby="heading-money-today">
+        <div class="section-label">Section 02</div>
+        <h2 id="heading-money-today">Why money does not move like information today</h2>
+        <p>
+            Unlike information, money usually cannot move across the internet
+            without passing through additional financial infrastructure. A piece
+            of software can request data from an API anywhere in the world with
+            little more than a network connection and the correct permissions,
+            but sending even a small payment often requires a payment processor,
+            merchant account, bank relationship, billing profile, or
+            subscription. Each layer introduces its own fees, settlement delays,
+            geographic limitations, and operational requirements. These systems
+            work well when transactions are relatively large and infrequent, but
+            their economics become less attractive as transaction volume rises
+            and the value of each individual transaction falls. A payment worth
+            only a few cents may generate less revenue than the processing,
+            fraud prevention, accounting, and billing infrastructure required to
+            support it, making many forms of micropayment impractical.
+        </p>
+        <p>
+            This limitation has helped shape an internet where many digital
+            services are funded through advertising or bundled into
+            subscriptions rather than paid for individually. That model assumes
+            that the user consuming the service is also a human whose attention
+            can be monetized through ads. <a
+            href="https://blog.cloudflare.com/agentic-internet-bot-report/">Cloudflare
+            reported in 2026</a> that non-human traffic had crossed 50 percent
+            of Internet traffic for the first time, illustrating how quickly
+            online activity is shifting beyond exclusively human users. Bots and
+            AI agents may consume information, APIs, and computational
+            resources, but they do not view or respond to advertisements in the
+            same way people do. As more internet activity shifts from humans
+            navigating interfaces to software to software communication,
+            services will need new ways to charge machines for the resources
+            they consume. Software can exchange information without establishing
+            a financial relationship beforehand, but exchanging money still
+            usually requires one. Payment infrastructure designed around
+            accounts, subscriptions, and human attention may therefore become an
+            increasingly poor fit for a more automated internet.
+        </p>
+    </section>
+    <section class="essay-section" id="stablecoins"
+             aria-labelledby="heading-stablecoins">
+        <div class="section-label">Section 03</div>
+        <h2 id="heading-stablecoins">What are stablecoins and why are they different</h2>
+        <p>
+            Stablecoins are digital tokens designed to maintain a stable value,
+            usually by tracking a currency such as the U.S. dollar. Tether’s
+            USDT is the largest stablecoin, while Circle’s USDC is another major
+            example. USDC maintains its dollar value through reserves held
+            primarily in U.S. Treasuries and cash. New USDC is minted when
+            dollars enter the system and burned when it is redeemed, helping
+            maintain its one-to-one value with the dollar.
+        </p>
+        <p>
+            Their importance, however, does not come simply from the fact that
+            they are digital, since most money already exists electronically in
+            bank accounts and payment systems. What makes stablecoins different
+            is that dollar-denominated value can exist on open blockchain
+            networks that applications can interact with directly. Software can
+            read balances, send and receive value, verify transfers, monitor
+            transactions, and execute logic based on those transactions through
+            code. Standardized token interfaces also allow the same stablecoin
+            to interact with many different wallets, applications, and smart
+            contracts without every participant needing a new payment
+            integration or financial relationship.
+        </p>
+        <p>
+            On permissionless networks, developers can build around these
+            capabilities without requiring a payment provider to grant access to
+            the underlying settlement network. Stablecoins therefore turn money
+            from something software primarily accessed through financial middle
+            men into something that can become something applications can work
+            with directly.
+        </p>
+    </section>
+    <section class="essay-section" id="internet-properties"
+             aria-labelledby="heading-internet-properties">
+        <div class="section-label">Section 04</div>
+        <h2 id="heading-internet-properties">How stablecoins make money behave more like information</h2>
+        <p>
+            Information moves easily across the internet because it is built
+            around properties such as standardization, addressing,
+            interoperability, automation, and verification. Stablecoins bring
+            many of those same properties to money. Standardization means
+            applications can interact with tokens through common interfaces such
+            as ERC-20, allowing wallets, exchanges, and smart contracts to work
+            with the same asset without requiring a custom integration for every
+            application. Addressing gives value a clear destination through
+            blockchain addresses, much like a URL or API endpoint gives software
+            a destination for information. Machine readability allows software
+            to inspect balances, transaction amounts, recipients, and payment
+            status directly from blockchain data. Verification allows an
+            application to independently confirm that a payment occurred rather
+            than relying only on a message from another party saying that it
+            did. Interoperability allows the same stablecoin to move between
+            different applications, wallets, and smart contracts while retaining
+            a common format.
+        </p>
+        <p>
+            Automation and programmability allow software to react to money as
+            soon as it arrives. A payment could unlock an article, trigger an
+            API response, release funds from escrow, split revenue between
+            multiple recipients, or begin another automated process without a
+            person manually approving each step. Stablecoins do not make money
+            the same as data, but they make it much easier for software to work
+            with. Applications can send it to a specific address, verify that it
+            arrived, read transaction details, and react to the payment
+            automatically.
+        </p>
+    </section>
+    <section class="essay-section" id="micropayments"
+             aria-labelledby="heading-micropayments">
+        <div class="section-label">Section 05</div>
+        <h2 id="heading-micropayments">Micropayments and Nanopayments</h2>
+        <p>
+            One consequence of making money directly accessible to software is
+            that payments can become much smaller and more frequent. Traditional
+            payment systems work well for relatively large purchases, but their
+            economics become increasingly difficult as transaction values fall
+            toward pennies or fractions of a cent. Consider a hypothetical
+            service charging ten cents per request. As of September 2026, Stripe
+            lists standard domestic card processing at 2.9 percent plus $0.30
+            per successful transaction. At that rate, processing a single
+            ten-cent payment would cost about $0.303, more than three times the
+            value of the payment itself. One thousand such payments would
+            generate only $100 in revenue while producing roughly $302.90 in
+            processing fees. By comparison, Stripe currently lists a promotional
+            stablecoin rate through Link of 0.8 percent per transaction. At that
+            rate, the same thousand ten-cent payments would produce roughly
+            $0.80 in processing fees. The exact economics vary by provider,
+            blockchain, and settlement architecture, but the comparison
+            demonstrates why fixed per-transaction costs become increasingly
+            problematic as payments get smaller.
+        </p>
+        <p>
+            Stablecoins operating on low-cost networks can support a different
+            model built around high transaction volume and low transaction
+            value. A user could pay for a single article instead of purchasing a
+            subscription, while software could pay individually for an API
+            request, a database query, a small amount of computation, or access
+            to a piece of data. Micropayments could be measured in cents, while
+            nanopayments could push this model into fractions of a cent.
+            Techniques such as batching and off-chain payment authorizations can
+            make these transactions more practical by combining many small
+            interactions before final blockchain settlement rather than
+            recording each one separately. This changes the economic unit of the
+            internet from paying for an ongoing relationship to potentially
+            paying for the exact resource consumed. As software becomes a larger
+            participant in the online economy, it may eventually need to
+            exchange tiny amounts of value as frequently as it exchanges data.
+        </p>
+    </section>
+    <section class="essay-section" id="protocol-payments"
+             aria-labelledby="heading-protocol-payments">
+        <div class="section-label">Section 06</div>
+        <h2 id="heading-protocol-payments">Payments becoming part of internet protocols</h2>
+        <p>
+            One of the clearest ways stablecoins could make money behave more
+            like information is by bringing payment directly into the protocols
+            the internet already uses.
+        </p>
+        <p>
+            As mentioned earlier, online content today is commonly monetized
+            through advertising or subscriptions, which often require users to
+            create an account, enter payment information, and establish an
+            ongoing billing relationship before accessing content. I explored an
+            alternative model through The Goodwell Gazette, a small news
+            application I built using x402. The x402 protocol extends the HTTP
+            request-and-response model by using the existing 402 Payment
+            Required status code: a client requests a resource, the server
+            responds with payment instructions, the client makes a stablecoin
+            payment, and the request can then be completed.
+        </p>
+        <p>
+            This model does not necessarily need to replace subscriptions or
+            advertising. A publisher could continue offering subscriptions while
+            also allowing occasional readers to purchase a single article,
+            creating an additional source of revenue without requiring a
+            long-term relationship. A similar approach could allow a user to pay
+            a small amount for an ad-free article, video, or other piece of
+            digital content rather than subscribing to an entire service. The
+            larger idea is that payment can become part of the same
+            request-and-response process software already uses to exchange
+            information, allowing access to digital resources and the transfer
+            of value to happen within the same internet interaction.
+        </p>
+    </section>
+    <section class="essay-section" id="machine-payments"
+             aria-labelledby="heading-machine-payments">
+        <div class="section-label">Section 07</div>
+        <h2 id="heading-machine-payments">Machine and API payments</h2>
+        <p>
+            The same model becomes even more powerful when the customer is not a
+            person but another piece of software. I demonstrated this idea with
+            AdOps, an application that performs tasks such as auditing
+            <code>ads.txt</code> and <code>sellers.json</code> files. Instead of
+            requiring every client to create an account, choose a subscription
+            plan, and maintain an ongoing billing relationship, a service could
+            communicate the price of an individual request, receive a small
+            stablecoin payment, and perform the work immediately.
+        </p>
+        <p>
+            This becomes especially relevant for AI agents and other autonomous
+            software, which may only need a service once or for a small number
+            of requests. An agent should not necessarily need to create an
+            account or sign up for a monthly subscription simply to access a few
+            cents’ worth of data or computation. Stablecoins could allow
+            software to discover a service, understand its price, pay for it,
+            and consume the result programmatically, all without a human first
+            establishing a financial relationship between the two systems.
+        </p>
+    </section>
+    <section class="essay-section" id="infrastructure"
+             aria-labelledby="heading-infrastructure">
+        <div class="section-label">Section 08</div>
+        <h2 id="heading-infrastructure">Building real payment infrastructure</h2>
+        <p>
+            Sending a stablecoin is relatively simple; building reliable payment
+            infrastructure around that transfer is much harder. A real
+            application needs to know who is expected to pay, how much they owe,
+            where the funds should be sent, whether the transfer actually
+            occurred, which transaction belongs to which payment request, and
+            when that payment should be considered complete. I explored these
+            problems through StablePay, a payment gateway I built that creates
+            payment requests, stores expected amounts and recipient addresses,
+            monitors blockchain activity, matches transfers to application
+            records, and exposes payment status through an API.
+        </p>
+        <p>
+            Stablecoin payments also introduce infrastructure decisions that are
+            easy to overlook. On networks such as Ethereum, transactions require
+            gas, which can force businesses or users to hold a separate volatile
+            asset such as ETH unless the application abstracts that requirement
+            through mechanisms such as sponsored transactions or account
+            abstraction. For a business, directly holding and managing volatile
+            assets can introduce additional operational, accounting, compliance,
+            and security concerns.
+        </p>
+        <p>
+            At a larger scale, payment systems may also need mechanisms such as
+            vaults, internal balances, and batching to make micropayments and
+            nanopayments economically practical. Rather than requiring every
+            tiny payment to generate its own blockchain transaction, payment
+            authorizations can be aggregated and settled together in a smaller
+            number of on-chain transactions. Circle has been developing
+            infrastructure around this model for stablecoin nanopayments,
+            illustrating how many small payment interactions can be separated
+            from their eventual blockchain settlement.
+        </p>
+        <p>
+            This distinction is important because making a tiny payment
+            technically possible is not enough; the surrounding infrastructure
+            must also make it economically practical. Stablecoins may simplify
+            the movement of value itself, but turning that capability into
+            dependable payment infrastructure still requires substantial
+            engineering around transaction monitoring, reconciliation, security,
+            fees, settlement, and user experience.
+        </p>
+    </section>
+    <section class="essay-section" id="programmable-money"
+             aria-labelledby="heading-programmable-money">
+        <div class="section-label">Section 09</div>
+        <h2 id="heading-programmable-money">Programmable money and smart contracts</h2>
+        <p>
+            Perhaps the most important distinction between stablecoins and
+            traditional digital money is that stablecoins can interact directly
+            with smart contracts. Smart contracts allow financial rules to be
+            expressed and executed in code, meaning software can determine when
+            funds move, who receives them, and how those funds should be
+            distributed. Stablecoins are especially useful in this environment
+            because they provide a stable unit of account without exposing users
+            to the price volatility of assets such as ETH.
+        </p>
+        <p>
+            I demonstrated this idea through PaymentSplitter, a Solidity smart
+            contract that accepts USDC and automatically divides a payment among
+            a fixed group of recipients according to predefined percentages. A
+            user approves the contract to spend a specified amount of USDC and
+            then calls the payment function. The contract uses the ERC-20
+            interface to transfer the funds and distribute each recipient’s
+            share according to rules encoded directly in the contract.
+        </p>
+        <p>
+            A system like this could be used to automatically divide marketplace
+            revenue, creator royalties, business income, or other shared
+            payments without requiring a separate service to calculate and
+            execute each payout. PaymentSplitter shows how stablecoins can carry
+            business rules with the payment itself. Instead of relying on an
+            outside service to calculate and distribute each share, the contract
+            handles that logic automatically. The same approach could be used
+            for things like escrow, royalties, marketplace payouts,
+            subscriptions, or other payments where money needs to move according
+            to predefined rules.
+        </p>
+    </section>
+    <section class="essay-section" id="limitations"
+             aria-labelledby="heading-limitations">
+        <div class="section-label">Section 10</div>
+        <h2 id="heading-limitations">Limitations and what still needs solving</h2>
+        <p>
+            Despite their advantages, stablecoins are still far from becoming an
+            invisible financial layer of the internet. Wallets and private-key
+            management remain unfamiliar and unforgiving for most users,
+            blockchain liquidity and applications are fragmented across multiple
+            networks, and transactions on public ledgers introduce privacy
+            concerns that do not exist in the same form within traditional
+            payment systems. Stablecoins also introduce risks of their own,
+            including dependence on the issuer, the assets backing the token,
+            and the mechanisms that maintain its peg.
+        </p>
+        <p>
+            Businesses face additional operational challenges. On networks such
+            as Ethereum, transactions normally require a separate asset such as
+            ETH to pay for gas, potentially forcing an institution that only
+            wants to transact in dollars to acquire, custody, account for, and
+            manage exposure to a volatile cryptocurrency. Technologies such as
+            gas sponsorship and account abstraction can hide this complexity
+            from users, but doing so requires additional infrastructure.
+        </p>
+        <p>
+            Stablecoin settlement also does not inherently provide the
+            chargebacks, fraud protection, refunds, or dispute-resolution
+            mechanisms that consumers have come to expect from traditional
+            payment networks.
+        </p>
+        <p>
+            Regulation presents another layer of complexity, particularly for
+            applications operating globally. The United States has established a
+            federal payment-stablecoin framework through the GENIUS Act, while
+            broader digital-asset market-structure legislation remains unsettled
+            after the CLARITY Act failed to advance in the Senate in September
+            2026. The European Union has taken a different approach under MiCA,
+            which places authorization and regulatory requirements on issuers of
+            currency-referenced stablecoins. For stablecoins to become truly
+            native internet infrastructure, much of this complexity will
+            ultimately need to be abstracted away so that developers and users
+            can receive the benefits of blockchain settlement without having to
+            understand or manage the machinery underneath it.
+        </p>
+    </section>
+    <section class="essay-section" id="conclusion"
+             aria-labelledby="heading-conclusion">
+        <div class="section-label">Section 11</div>
+        <h2 id="heading-conclusion">The successful stablecoin future may be invisible</h2>
+        <p>
+            The most successful stablecoin future may not look like a world
+            where everyone opens a crypto wallet and consciously chooses to pay
+            with USDC. A more compelling outcome is one in which stablecoins
+            become infrastructure beneath the applications people already use.
+            Maturity would mean that stablecoins are widely used for settlement
+            while the end user neither knows nor cares which blockchain, wallet,
+            or payment rail is operating underneath the experience.
+        </p>
+        <p>
+            A customer may simply see a price in dollars, while the application
+            handles conversion, settlement, verification, and movement of value
+            in the background. In that sense, the most successful stablecoin
+            applications may eventually stop feeling like crypto applications at
+            all. Stablecoins could become part of the underlying infrastructure
+            through which software exchanges value, much as internet protocols
+            quietly move information today. If that happens, their importance
+            will not come from convincing users to adopt a new category of
+            money, but from making money itself easier for software to use.
+        </p>
+    </section>
 
-        <p>Wesley Shaw · 2026</p>
-    </header>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>Wesley Shaw · Stablecoins: Making Money Native to the Internet</span>
+        <a href="#top">Back to top ↑</a>
+    </footer>
+    <script>
 
-    <nav>
-        <h2>Contents</h2>
+    const progress = document.querySelector('.progress');
+    const sections = [...document.querySelectorAll('.essay-section')];
+    const links = [...document.querySelectorAll('.contents a')];
+    let scheduled = false;
 
-        <!-- links to sections -->
-    </nav>
+    function updateReadingPosition() {
+        const available = document.documentElement.scrollHeight
+            - window.innerHeight;
+        const percent = available > 0 ? window.scrollY / available * 100 : 0;
+        progress.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+        let current = null;
+        for (const section of sections) {
+            if (section.getBoundingClientRect().top <= 150) {
+                current = section.id;
+            }
+        }
+        for (const link of links) {
+            if (link.getAttribute('href') === `#${current}`) {
+                link.setAttribute('aria-current', 'location');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        }
+        scheduled = false;
+    }
 
-    <article>
-        <section id="introduction">
-            <h2>Introduction</h2>
+    function scheduleUpdate() {
+        if (!scheduled) {
+            scheduled = true;
+            requestAnimationFrame(updateReadingPosition);
+        }
+    }
 
-            <p>...</p>
-            <p>...</p>
-        </section>
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('load', updateReadingPosition);
+    updateReadingPosition();
 
-        <section id="money-today">
-            <h2>
-                Why Money Does Not Move Like Information Today
-            </h2>
-
-            <p>...</p>
-            <p>...</p>
-        </section>
-
-        <section id="stablecoins">
-            <h2>
-                What Are Stablecoins and Why Are They Different?
-            </h2>
-
-            <p>...</p>
-            <p>...</p>
-        </section>
-
-        <section id="internet-properties">
-            <h2>Making Money Behave More Like Data</h2>
-
-            <p>...</p>
-            <p>...</p>
-        </section>
-
-        <section id="micropayments">
-            <h2>Micropayments and Nanopayments</h2>
-
-            <p>...</p>
-        </section>
-
-        <section id="protocol-payments">
-            <h2>
-                Payments Becoming Part of Internet Protocols
-            </h2>
-
-            <p>...</p>
-
-            <div class="project">
-                <h3>Goodwell Gazette</h3>
-                <p>...</p>
-            </div>
-        </section>
-
-        <section id="machine-payments">
-            <h2>Machine and API Payments</h2>
-
-            <p>...</p>
-
-            <div class="project">
-                <h3>AdOps</h3>
-                <p>...</p>
-            </div>
-        </section>
-
-        <section id="infrastructure">
-            <h2>Building Real Payment Infrastructure</h2>
-
-            <p>...</p>
-
-            <div class="project">
-                <h3>StablePay</h3>
-                <p>...</p>
-            </div>
-        </section>
-
-        <section id="programmable-money">
-            <h2>Programmable Money and Smart Contracts</h2>
-
-            <p>...</p>
-
-            <div class="project">
-                <h3>PaymentSplitter</h3>
-                <p>...</p>
-            </div>
-        </section>
-
-        <section id="limitations">
-            <h2>Limitations and What Still Needs Solving</h2>
-
-            <p>...</p>
-            <p>...</p>
-        </section>
-
-        <section id="conclusion">
-            <h2>
-                The Successful Stablecoin Future May Be Invisible
-            </h2>
-
-            <p>...</p>
-            <p>...</p>
-        </section>
-
-        <section id="references">
-            <h2>References</h2>
-
-            <!-- sources -->
-        </section>
-    </article>
-</main>
+    </script>
+</body>
+</html>
